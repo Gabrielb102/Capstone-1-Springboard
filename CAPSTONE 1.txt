@@ -1,0 +1,32 @@
+﻿Ideas
+
+
+Coin tracker, 
+CoinAPI.io 
+Make a coin tracker similar to the ones used on exchanges. Coins would be able to be tracked over time in whichever other coin they would like. 
+
+
+Crime heat map
+Crimometer
+Make a crime website that shows crime heat maps which can also be filtered by crime. This would be useful for investigating the cause of crime in general, finding a good place to move, and knowing what to watch out for when you’re going to a certain part of town (or the country). 
+
+
+Healthcare something something ??
+Show procedure prices across the country to encourage travel for expensive procedures.
+Haven’t found an api for this. 
+
+
+________________
+
+
+Proposal
+1. My website will answer the question of, “what crimes are happening in my area right now?” without the journalism. The numbers and types of crimes listed in each area will be able to inform users about which crimes they should be aware of, how often they occur, and which areas are most and least heavily affected by crime. 
+2. This website is likely to be visited by people who are searching for a place to move which belong to the groups of: people moving out of their parents’ place for the first time, or concerned parents who want to raise their children in a safe area. Travelers could also use this website to know which areas to avoid, although I imagine that’s less likely than the first two groups. Law enforcement could also use this data. By finding out what types of crimes are occuring in each area, the data may also be used to investigate what causes the crimes in an effort to control it.
+3. The API that I found for this project, Crime-o-meter gives crime data on an incident by incident basis. Every report details the type of crime that occurred, when it occurred, and at which coordinates it took place. 
+4. First I would create a model for the crimes that take place with the categories necessary for the app to work. I would first populate tables for countries, counties, states/provinces, and cities, then I would use the crime API to populate the crimes table. The user experience would be just with a homepage where they can visualize a map with the crimes charted where they occured, and the frequency represented as a color in the region. 
+   1. The database schema has five tables.   
+   2. I might run into issues identifying the location of crimes, which is dependent on a geolocation library or api (I currently plan on using leaflet, although I haven’t fully read the docs yet). There might especially be problems in identifying the location of crimes occurring in rural areas, like on highways, which may have happened outside of any city or town. 
+   3. The information is all public, so there’s nothing I need to secure, but I would prefer not to show the names of the perpetrators of the crimes.
+   4. The app will have the heatmap functionality as well as an over time charting functionality to see the rise/fall of crime in one location over time.
+   5. The user will be presented with the map as a homepage, by which they will be able to find any location. They can then type in a location to switch to the graph view of that location.
+   6. Besides CRUD, by app will help visualize the data presented. That will be the primary purpose. CRUD will only take place when individual data points are selected.
